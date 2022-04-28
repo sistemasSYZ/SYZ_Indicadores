@@ -1,0 +1,33 @@
+body {
+    font-family: 'Times New Roman', Times, Arial, serif, Verdana, sans-serif, Helvetica;
+    font-size: 12px;
+}
+
+thead tr th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+.table-responsive {
+    height: 200px;
+    overflow: scroll;
+}
+
+.trhover:hover {
+    background-color: rgb(230, 115, 115);
+    color: white;
+}
+
+.letras {
+    font-family: 'Times New Roman', Times, Arial, serif, Verdana, sans-serif, Helvetica;
+    font-size: 10px;
+}
+
+.grf {
+    
+    margin-top:50px; 
+    margin-bottom:80px; 
+    margin-left:40px;
+}
