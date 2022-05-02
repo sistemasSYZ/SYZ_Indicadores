@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPI SYZ</title>
+    <link rel="icon" href="../img/syz.png">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -34,6 +35,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="registrarkpi.php">Registrar KPI</a>
                             </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="graficas/graficaarea.php">Graficas por area</a>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="salir.php" tabindex="-1" >Salir</a>
                             </li>

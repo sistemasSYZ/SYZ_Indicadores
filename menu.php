@@ -41,7 +41,7 @@
                 <th scope="col">AREA</th>
                 <th scope="col">TIPO</th>
                 <th scope="col">NOMBRE KPI</th>
-                <th scope="col">META</th>
+                <th scope="col">META MENSUAL</th>
                 <th scope="col">UNIDAD</th>
                 <th scope="col">F Registro</th>
                 <th scope="col">GRAFICAS</th>

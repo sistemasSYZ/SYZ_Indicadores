@@ -19,14 +19,15 @@ include_once "conexion.php";
         $tipo=$_POST["txttipo"];
         $accion=$_POST["txtaccion"];
         $formula = strtoupper($_POST["txtformula"]);
+        $txtmetaango = $POST["TXTtxtmetaango"];
 
             
         switch($accion){
             // Guarda nuevo
             case "1":
-                $sentencia="INSERT INTO indicadores (area,nombre,meta,estado,unidad,fecharegistro,tipo,fechamodificacion,formula) VALUES (?,?,?,?,?,?,?,?,?);";
+                $sentencia="INSERT INTO indicadores (area,nombre,meta,metaango,estado,unidad,fecharegistro,tipo,fechamodificacion,formula) VALUES (?,?,?,?,?,?,?,?,?,?);";
                 $consulta = $base_de_datos->prepare($sentencia);
-                $resultado=$consulta->execute([$area,$nombre,$meta,$estado,$unidad,$fecharegistro,$tipo,$fecharegistro,$formula]);
+                $resultado=$consulta->execute([$area,$nombre,$meta,$metaango,$estado,$unidad,$fecharegistro,$tipo,$fecharegistro,$formula]);
                 
                 break;
 
@@ -34,9 +35,9 @@ include_once "conexion.php";
             //modifica existente
             case "2":
                 $cod_kpi=$_POST["txtcod_kpi"];
-                $sentencia="UPDATE indicadores SET area=?,nombre=?,meta=?,estado=?,unidad=?,fechamodificacion=?,tipo=?,formula=? WHERE cod_kpi  = ?;";
+                $sentencia="UPDATE indicadores SET area=?,nombre=?,meta=?,metaango=?,estado=?,unidad=?,fechamodificacion=?,tipo=?,formula=? WHERE cod_kpi  = ?;";
                 $consulta = $base_de_datos->prepare($sentencia);
-                $resultado=$consulta->execute([$area,$nombre,$meta,$estado,$unidad,$fecharegistro,$tipo,$formula,$cod_kpi]);
+                $resultado=$consulta->execute([$area,$nombre,$meta,$metaango,$estado,$unidad,$fecharegistro,$tipo,$formula,$cod_kpi]);
                 
                 break;
         

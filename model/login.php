@@ -30,13 +30,13 @@
     } 
 
 
-    /*  credenciales actuales
-        insert into prueba values('COMERCIAL','COMER123CIAL');
-        insert into prueba values('LOGISTICA','LOGIS987TICA');
-        insert into prueba values('FINANCIERA','FINAN456CIERA');
-        insert into prueba values('SOPORTE','SOPOR234TE');
-        insert into prueba values('OTROS','OTROS123');
-        insert into prueba values('ADMINISTRADOR','SYZADM1N');
+    /*  clave='TIC*123456+' WHERE nom_usuario='TIC';
+        clave='ADM*123456+' WHERE nom_usuario='ADMINISTRATIVA';
+        clave='TEC*123456+' WHERE nom_usuario='TECNICA';
+        clave='INN*123456+' WHERE nom_usuario='INNOVACION';
+        clave='COM*123456+' WHERE nom_usuario='COMERCIAL';
+        clave='LOG*123456+' WHERE nom_usuario='LOGISTICA';
+        clave='FIN*123456+' WHERE nom_usuario='FINANCIERA';
 
     */
 ?>

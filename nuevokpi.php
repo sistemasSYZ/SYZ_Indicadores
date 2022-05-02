@@ -80,8 +80,13 @@
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>
-                        <label for="txtmeta" class="form-label">META DEL KPI</label>
-                        <input type="text" class="form-control" id="txtmeta" name="txtmeta" value="" required>
+                        <label for="txtmeta" class="form-label">META MES DEL KPI</label>
+                        <input type="number" step="0.01" class="form-control" id="txtmeta" name="txtmeta" value="" required>
+                        <div class="valid-feedback"> Correcto ! </div>
+                    </div>
+                    <div>
+                        <label for="txtmetaango" class="form-label">META ANUAL DEL KPI</label>
+                        <input type="number" step="0.01" class="form-control" id="txtmetaango" name="txtmetaango" value="" required>
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>
@@ -142,7 +147,8 @@
                             <th hidden scope="col">ID</th>
                             <th scope="col">AREA</th>
                             <th scope="col">NOMBRE KPI</th>
-                            <th scope="col">META</th>
+                            <th scope="col">META MENSUAL</th>
+                            <th scope="col">META ANUAL</th>
                             <th scope="col">UNIDAD</th>
                             <th scope="col">ESTADO</th>
                             <th scope="col">TIPO KPI</th>
@@ -162,6 +168,7 @@
                             <td><?php echo $dato->area; ?></td>
                             <td><?php echo $dato->nombre; ?></td>
                             <td><?php echo $dato->meta; ?></td>
+                            <td><?php echo $dato->metaango; ?></td>
                             <td><?php echo $dato->unidad; ?></td>
                             <td><?php echo $dato->estado; ?></td>
                             <td><?php echo $dato->tipo; ?></td>

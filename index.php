@@ -34,6 +34,7 @@
                     <option value="LOGISTICA">LOGISTICA </option>   
                     <option value="TECNICA">TECNICA </option>
                     <option value="TIC">TIC </option>
+                    <option value="PRESIDENCIA">PRESIDENCIA </option>
                 </select>
                 <br>
                 <input type="text" class="form-control py-2" name="txtcontraseña" placeholder="Digite su contraseña">

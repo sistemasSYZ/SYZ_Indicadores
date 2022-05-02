@@ -111,7 +111,7 @@
                     </div>
                     <div>
                         <label for="txtvalor" class="form-label">VALOR DEL KPI</label>
-                        <input type="text" class="form-control" id="txtvalor" name="txtvalor" value="" required>
+                        <input type="number" step="0.01" class="form-control" id="txtvalor" name="txtvalor" value="" required>
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>
