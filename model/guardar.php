@@ -19,7 +19,7 @@ include_once "conexion.php";
         $tipo=$_POST["txttipo"];
         $accion=$_POST["txtaccion"];
         $formula = strtoupper($_POST["txtformula"]);
-        $txtmetaango = $POST["TXTtxtmetaango"];
+        $metaango = $_POST["txtmetaango"];
 
             
         switch($accion){

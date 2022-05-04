@@ -1,9 +1,9 @@
 {
 
     "conexion": {
-        "server" : "192.168.0.62",
+        "server" : "mydbsyzinstance.c38sbdell0f1.us-east-2.rds.amazonaws.com",
         "user" : "postgres",
-        "pasword" : "q1w2e3r4t5",
+        "pasword" : "-s46Hs..",
         "database" : "indicadores",
         "port" : "5432"
     }

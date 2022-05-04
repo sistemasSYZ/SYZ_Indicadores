@@ -49,8 +49,13 @@
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>
-                        <label for="txtmeta" class="form-label">META DEL KPI</label>
-                        <input type="text" class="form-control" id="txtmeta" name="txtmeta" value="<?php echo $dato->meta ?>" required>
+                        <label for="txtmeta" class="form-label">META MES DEL KPI</label>
+                        <input type="number" step="0.01" class="form-control" id="txtmeta" name="txtmeta" value="<?php echo $dato->meta ?>" required>
+                        <div class="valid-feedback"> Correcto ! </div>
+                    </div>
+                    <div>
+                        <label for="txtmetaango" class="form-label">META AÑO DEL KPI</label>
+                        <input type="number" step="0.01" class="form-control" id="txtmetaango" name="txtmetaango" value="<?php echo $dato->metaango ?>" required>
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>
@@ -64,6 +69,11 @@
                             <option value="PORCENTAJE">PORCENTAJE</option>
                             
                         </select>
+                        <div class="valid-feedback"> Correcto ! </div>
+                    </div>
+                    <div>
+                        <label for="txtformula" class="form-label">FORMULA KPI</label>
+                        <input type="text" class="form-control" id="txtformula" name="txtformula" value="<?php echo $dato->formula ?>" required>
                         <div class="valid-feedback"> Correcto ! </div>
                     </div>
                     <div>

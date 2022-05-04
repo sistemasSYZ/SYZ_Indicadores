@@ -1,4 +1,5 @@
 <!-- REGISTRA UN NUEVO KPI -->
+<link rel="icon" href="img/syz.png">
 <?php 
     session_start();
     include 'template/header.php';
@@ -149,6 +150,7 @@
                             <th scope="col">NOMBRE KPI</th>
                             <th scope="col">META MENSUAL</th>
                             <th scope="col">META ANUAL</th>
+                            <th scope="col">FORMULA KPI</th>
                             <th scope="col">UNIDAD</th>
                             <th scope="col">ESTADO</th>
                             <th scope="col">TIPO KPI</th>
@@ -169,6 +171,7 @@
                             <td><?php echo $dato->nombre; ?></td>
                             <td><?php echo $dato->meta; ?></td>
                             <td><?php echo $dato->metaango; ?></td>
+                            <td><?php echo $dato->formula; ?></td>
                             <td><?php echo $dato->unidad; ?></td>
                             <td><?php echo $dato->estado; ?></td>
                             <td><?php echo $dato->tipo; ?></td>
