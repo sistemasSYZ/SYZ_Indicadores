@@ -1,10 +1,12 @@
 <?php
+$conexion = "host='mydbsyzinstance.c38sbdell0f1.us-east-2.rds.amazonaws.com' port='5432' dbname='usuarios' user='postgres' password='-s46Hs..'";
+$validar = pg_connect($conexion);
 
-   
+  /* 
     //Se traen los datos de conexion del config
     
     $direccion = dirname(__FILE__);
-    $jsondata = file_get_contents($direccion."/"."config");
+    $jsondata = file_get_contents($direccion."/"."config2");
     $listado = json_decode($jsondata, true);
     foreach ($listado as $key => $value) {
 
@@ -23,5 +25,5 @@
     } catch (Exception $e) {
         echo "Ocurrió un error con la base de datos: " . $e->getMessage();
     }
-
+*/
 ?>

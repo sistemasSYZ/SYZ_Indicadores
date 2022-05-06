@@ -1,14 +1,16 @@
 <?php 
     include 'template/header.php';
     include_once "model/conexion2.php";
-    
+    include_once "model/conexion.php";
     session_start();
-    $area = $_SESSION["area"];
 
-    if (empty($area)){
-        header('location: index.php');
-        exit();
-    }
+    $usuario = $_SESSION['usuario'];
+
+    $sql = "SELECT area FROM users WHERE email='$usuario'";
+    $consult = pg_query($sql);
+    $fila = pg_fetch_array($consult);
+    $area = $fila[0];
+
 
     $conexion = new conexion;
     $textsentencia="SELECT distinct a.* from indicadores a inner join registrokpi b on a.cod_kpi = b.cod_kpi where a.estado='ACTIVO' order by a.area,a.tipo,a.nombre";

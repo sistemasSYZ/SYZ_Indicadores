@@ -39,7 +39,7 @@
                                 <a class="nav-link" href="graficas/graficaarea.php">Graficas por area</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="salir.php" tabindex="-1" >Salir</a>
+                                <a class="nav-link" href="../Login/portales/gestor.php" tabindex="-1" >Salir</a>
                             </li>
                             </ul>
                          </div>
