@@ -1,10 +1,16 @@
+<link rel="icon" href="img/syz.png">
 <?php 
     include 'template/header.php';
     include_once "model/conexion2.php";
     include_once "model/conexion.php";
     session_start();
-
+    
     $usuario = $_SESSION['usuario'];
+
+    if (empty($usuario)){
+        header('location: ../Login/partials/logout.php');
+        exit();
+    } 
 
     $sql = "SELECT area FROM users WHERE email='$usuario'";
     $consult = pg_query($sql);

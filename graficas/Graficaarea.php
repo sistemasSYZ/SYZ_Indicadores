@@ -1,11 +1,13 @@
 <?php
     session_start();
     require_once "../model/conexion2.php";
+
     $conexion = new conexion;
   
-    $area = $_SESSION["area"];
+    $area = $_SESSION["usuario"];
+
     if (empty($area)){
-        header('location: ../index.php');
+        header('location: ../../index.php');
         exit();
     }       
 

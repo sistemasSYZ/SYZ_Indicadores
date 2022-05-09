@@ -4,6 +4,8 @@
     session_start();
     include 'template/header.php';
     include_once "model/conexion2.php";
+    include_once "model/conexion.php";
+
     $conexion = new conexion;
 
 ?>
@@ -11,11 +13,18 @@
     <div class="container py-3">
         <h2>
             <?php
-                $area = $_SESSION["area"];
-                if (empty($area)){
-                    header('location: index.php');
-                    exit();
-                }
+            $usuario = $_SESSION['usuario'];
+
+            if (empty($usuario)){
+                header('location: ../Login/partials/logout.php');
+                exit();
+            } 
+            
+    		$sql = "SELECT area FROM users WHERE email='$usuario'";
+    		$consult = pg_query($sql);
+    		$fila = pg_fetch_array($consult);
+    		$area = $fila[0];
+                
                 echo 'Ingresar un nuevo indicador (KPI) para el area : '.$area;
 
                 $textsentencia="select * from indicadores where area='".$area."' order by estado asc,nombre asc";
