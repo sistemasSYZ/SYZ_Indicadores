@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="img/syz.png" type="image/x-icon">
 <?php 
     include 'template/header.php';
     include_once "model/conexion2.php";

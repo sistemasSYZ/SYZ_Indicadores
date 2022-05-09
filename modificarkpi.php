@@ -1,4 +1,5 @@
 <!-- MODIFICA LOS REGISTROS KPI -->
+<link rel="shortcut icon" href="img/syz.png" type="image/x-icon">
 <?php 
     session_start();
     include 'template/header.php';

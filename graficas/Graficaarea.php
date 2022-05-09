@@ -5,7 +5,7 @@
   
     $area = $_SESSION["area"];
     if (empty($area)){
-        header('location: ../index.php');
+        header('location: ../index');
         exit();
     }       
 

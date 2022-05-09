@@ -7,13 +7,14 @@
     <title>Indicadores SYZ</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/syz.png" type="image/x-icon">
     
 </head>
 <body>
     <div class="container-fluid bg-danger">
         <div class="row">
-            <div class="col-8">
-                <header class="py-2 text-center"> 
+            <div class="text-center">
+                <header class="py-2"> 
                     <H1 class="text-light">INDICADORES DE GESTION SYZ</H1>
                 </header>
             </div>
@@ -27,7 +28,7 @@
             <div class="container py-3">
                 <select class="form-select" aria-label="Default select example" name="txtcampo">
                     <option selected>Seleccione usuario a ingresar</option>
-                    <option value="ADMINISTRATIVA">ADMINISTRATIVO</option>
+                    <option value="ADMINISTRATIVA">ADMINISTRATIVA</option>
                     <option value="COMERCIAL">COMERCIAL</option>
                     <option value="FINANCIERA">FINANCIERA </option>
                     <option value="INNOVACION">INNOVACION </option>

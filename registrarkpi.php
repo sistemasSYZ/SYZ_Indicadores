@@ -1,4 +1,6 @@
 <!-- REGISTRA UN NUEVO VALOR PARA UN KPI -->
+<link rel="shortcut icon" href="img/syz.png" type="image/x-icon">
+
 <?php 
     session_start();
     include 'template/header.php';
@@ -17,7 +19,7 @@
                 } 
                 echo 'Nuevo registro (KPI) para el area : '.$area;
                
-                $textsentencia="select c.*, b.nombre from registrokpi c inner join indicadores b on c.cod_kpi = b.cod_kpi where b.area= '".$area."' order by c.ango, c.mes, b.cod_kpi";
+                $textsentencia="select c.*, b.nombre from registrokpi c inner join indicadores b on c.cod_kpi = b.cod_kpi where b.area= '".$area."' order by c.fecharegistro desc, c.mes, b.cod_kpi";
                 $resultado = $conexion->obtenerDatos($textsentencia);
                 
                 $textsenten = "select * from indicadores where area ='". $area ."' order by nombre" ;
