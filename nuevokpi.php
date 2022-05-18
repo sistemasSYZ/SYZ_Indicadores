@@ -1,7 +1,6 @@
 <!-- REGISTRA UN NUEVO KPI -->
 <link rel="icon" href="img/syz.png">
 <?php 
-    session_start();
     include 'template/header.php';
     include_once "model/conexion2.php";
     include_once "model/conexion.php";
@@ -10,7 +9,7 @@
 
 ?>
 
-    <div class="container py-2" style="margin-top: 130px;">
+    <div class="container py-2" style="margin-top: 150px;">
         <h2>
             <?php
             $usuario = $_SESSION['usuario'];
@@ -71,7 +70,7 @@
             ?>
     <!-- alerta -->
         
-    <div class="container table-responsive" style="height: 500px; margin-top: 10px; margin-bottom: 47px;">
+    <div class="container table-responsive" style="height: 500px; margin-top: 15px; margin-bottom: 47px;">
         <div class="row">
             <div class="col-md-3">
                 <form class="row g-3" method="POST" action="model/guardar.php">

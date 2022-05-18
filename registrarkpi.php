@@ -1,7 +1,6 @@
 <!-- REGISTRA UN NUEVO VALOR PARA UN KPI -->
 <link rel="icon" href="img/syz.png">
 <?php 
-    session_start();
     include 'template/header.php';
     include_once "model/conexion2.php";
     include_once "model/conexion.php";
@@ -10,7 +9,7 @@
 
 ?>
 
-    <div class="container py-3" style="margin-top: 120px;">
+    <div class="container py-3" style="margin-top: 142px;">
         <h2>
             <?php
             $usuario = $_SESSION['usuario'];
