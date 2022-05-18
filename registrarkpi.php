@@ -10,7 +10,7 @@
 
 ?>
 
-    <div class="container py-3">
+    <div class="container py-3" style="margin-top: 120px;">
         <h2>
             <?php
             $usuario = $_SESSION['usuario'];
@@ -74,7 +74,7 @@
             ?>
     <!-- alerta -->
         
-    <div class="container table-responsive" style="height: 450px">
+    <div class="container table-responsive" style="height: 450px; margin-top: 30px; margin-bottom: 80px;">
         <div class="row">
             <div class="col-md-3">
                 <form class="row g-3" method="POST" action="model/guardarkpi.php">

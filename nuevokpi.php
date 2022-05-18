@@ -10,7 +10,7 @@
 
 ?>
 
-    <div class="container py-3">
+    <div class="container py-2" style="margin-top: 130px;">
         <h2>
             <?php
             $usuario = $_SESSION['usuario'];
@@ -71,7 +71,7 @@
             ?>
     <!-- alerta -->
         
-    <div class="container table-responsive" style="height: 500px">
+    <div class="container table-responsive" style="height: 500px; margin-top: 10px; margin-bottom: 47px;">
         <div class="row">
             <div class="col-md-3">
                 <form class="row g-3" method="POST" action="model/guardar.php">

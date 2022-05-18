@@ -11,41 +11,75 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <div class="container-fluid bg-danger">
-        <div class="row">
-            <div class="col-8">
-                <header class="py-2 text-center"> 
-                    <H1 class="text-light">INDICADORES DE GESTION SYZ</H1>
-                </header>
-            </div>
-            <div class="col-4">
-                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E2E1E1;">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="menu.php">Inicio</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="nuevokpi.php">Nuevo KPI</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registrarkpi.php">Registrar KPI</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="graficas/graficaarea.php">Graficas por area</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="../Login/portales/gestor.php" tabindex="-1" >Salir</a>
-                            </li>
-                            </ul>
-                         </div>
-                    </div>
-                </nav>
-            </div>
-           
-        </div>
+<?php
+session_start();
+include_once "model/conexion3.php";
+$usuario = $_SESSION['usuario'];
+//Extraccion de BBDD
+$sql= "SELECT * FROM users WHERE email='$usuario'";
+$obj = pg_query($sql);
+$fila = pg_fetch_array($obj);
+$userName = $fila[2];
+$userGender = $fila[6];
+$userArea = $fila[11];
+$userPermi = $fila[13];
+$userId = $fila[12];
+
+?>
+    <header id="header">
+        <?php
+        if($userGender == "F"){
+            echo "<h2 id='salute'><b>BIENVENIDA $userName</b></h2>";
+        }else if ($userGender == "M"){
+            echo "<h2 id='salute'><b>BIENVENIDO $userName</b></h2>";
+        }
+
+        ?>
+        <img src="../Login/multimedia/logopng.png" id="img-hd">
+        <a href="../Login/portales/gestor.php" id="logout"><p1 class='bx bx-log-out'></p1></a>
+    </header> 
+</head>
+<body>
+    <div style="border-top: 5px solid black; border-bottom: 5px solid black;top: 90; position: fixed; width: 100%; background-color: rgb(204 48 43)">
+        <header class="mt-2 text-center"> 
+            <H2 class="text-light">INDICADORES DE GESTION SYZ</H2>
+                <div class="listsss">
+                <li class="itemsss"><a class="linktopsss" href="menu.php">INICIO</a></li>
+                <li class="itemsss"><a class="linktopsss" href="nuevokpi.php">Nuevo KPI</a></li>
+                <li class="itemsss"><a class="linktopsss" href="registrarkpi.php">Registrar KPI</a></li>
+                <!--<li class="itemsss"><a class="linktopsss" href="graficas/graficaarea.php">Graficas por Area</a></li>-->
+                </div>
+        </header>
     </div>
+<body>
+
+<style>
+.listsss{
+    position: fixed;
+    top: 100;
+    right: 10;
+}
+
+.itemsss{
+    display: inline-block;
+    list-style: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.itemsss, .linktopsss{
+    color:black;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.linktopsss:hover{
+    color: white;
+}
+</style>

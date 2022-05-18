@@ -3,7 +3,6 @@
     include 'template/header.php';
     include_once "model/conexion2.php";
     include_once "model/conexion.php";
-    session_start();
     
     $usuario = $_SESSION['usuario'];
 
@@ -24,7 +23,7 @@
                
 ?>
 
-<div class="container py-2">
+<div class="container py-2" style="margin-top: 150px;">
     
     <h2> 
         <?php
@@ -32,12 +31,12 @@
         ?>
     </h2>
 </div>
+<H3 class= "container py-2" style = "">Listado de indicadores SYZ</H3>
 
-<div class="container table-responsive" style="height: 450px">
+<div class="container table-responsive" style="height: 450px; margin-bottom: 60px;">
 
     <div class="col-md-8">
 
-        <H3 style = "margin-top:20px; margin-bottom:30px;">Listado de indicadores SYZ</H3>
 
         <table id="example" class="table table-striped table-hover" style="font-size: 10px">
 
